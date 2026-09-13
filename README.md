@@ -1,9 +1,3 @@
-<!--
-Copyright (c) Ansible Project
-GNU General Public License v3.0+ (see LICENSES/GPL-3.0-or-later.txt or https://www.gnu.org/licenses/gpl-3.0.txt)
-SPDX-License-Identifier: GPL-3.0-or-later
--->
-
 # Community SOPS Collection
 [![Documentation](https://img.shields.io/badge/docs-brightgreen.svg)](https://docs.ansible.com/ansible/devel/collections/community/sops/)
 [![CI](https://github.com/ansible-collections/community.sops/actions/workflows/nox.yml/badge.svg?branch=main)](https://github.com/ansible-collections/community.sops/actions)
@@ -366,4 +360,4 @@ See [LICENSES/GPL-3.0-or-later.txt](https://github.com/ansible-collections/commu
 
 Parts of the collection are licensed under the [BSD 2-Clause license](https://github.com/ansible-collections/community.sops/blob/main/LICENSES/BSD-2-Clause.txt).
 
-All files have a machine readable `SDPX-License-Identifier:` comment denoting its respective license(s) or an equivalent entry in an accompanying `.license` file. Only changelog fragments (which will not be part of a release) are covered by a blanket statement in `REUSE.toml`. This conforms to the [REUSE specification](https://reuse.software/spec/).
+All files have a machine readable `SPDX-License-Identifier:` comment denoting its respective license(s) or an equivalent entry in an accompanying `.license` file. Only changelog fragments (which will not be part of a release) are covered by a blanket statement in `REUSE.toml`. This conforms to the [REUSE specification](https://reuse.software/spec/).
