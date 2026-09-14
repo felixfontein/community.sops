@@ -9,12 +9,15 @@ __metaclass__ = type
 try:
     from collections.abc import Sequence, Mapping
     string_type = str
+    int_types = (int,)
 except ImportError:
     # Python 2 compat
     # pylint: disable-next=ansible-bad-import-from,deprecated-class
     from collections import Sequence, Mapping  # type: ignore[attr-defined]
     # pylint: disable-next=undefined-variable
     string_type = unicode  # type: ignore[misc,name-defined]
+    # pylint: disable-next=undefined-variable
+    int_types = (int, long)  # type: ignore[assignment,name-defined]
 
 
 try:
@@ -34,7 +37,7 @@ def _collect_recursively(value, collected_values, int_to_string):
     elif isinstance(value, Sequence):
         for v in value:
             _collect_recursively(v, collected_values, int_to_string=int_to_string)
-    elif int_to_string and isinstance(value, int):
+    elif int_to_string and isinstance(value, int_types) and not isinstance(value, bool):
         collected_values.append(string_type(value))
 
 
